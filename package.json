@@ -1,0 +1,21 @@
+{
+  "name": "openclaw-sgp-business-pipeline",
+  "version": "1.0.0",
+  "description": "OpenClaw pipeline for researching brands and extracting Singapore legal entity information",
+  "main": "scripts/run-pipeline.js",
+  "scripts": {
+    "start": "python3 scripts/run-pipeline.py",
+    "test": "python3 scripts/run-pipeline.py 'Grab Technologies Pte Ltd'",
+    "install-deps": "pip install -r requirements.txt"
+  },
+  "keywords": [
+    "openclaw",
+    "singapore",
+    "business",
+    "entity",
+    "uen",
+    "research"
+  ],
+  "author": "",
+  "license": "MIT"
+}

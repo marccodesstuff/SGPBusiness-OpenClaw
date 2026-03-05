@@ -212,7 +212,7 @@ File: `/home/beakthor0301/Code/openclaw-playground/requirements.txt`
 ```
 requests==2.31.0              # HTTP client for Perplexica API calls
 scrapling[fetchers]           # Adaptive stealth scraping (replaces beautifulsoup4 + lxml)
-ollama==0.1.48                # Ollama client (optional)
+ollama>=0.1.48                # Ollama client (optional, any recent version)
 ```
 
 To install: `pip install -r requirements.txt`

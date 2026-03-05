@@ -1,0 +1,41 @@
+{
+  "name": "scrape-sgpbusiness",
+  "description": "Scrapes SGPBusiness (sgbizfile.gov.sg) for UEN and legal entity details",
+  "inputs": {
+    "entity_name": {
+      "type": "string",
+      "description": "Official entity name to search for",
+      "required": true
+    }
+  },
+  "outputs": {
+    "entity_name": {
+      "type": "string",
+      "description": "Confirmed entity name from SGPBusiness"
+    },
+    "uen": {
+      "type": "string",
+      "description": "Unique Entity Number"
+    },
+    "business_type": {
+      "type": "string",
+      "description": "Business entity type"
+    },
+    "registration_date": {
+      "type": "string",
+      "description": "Registration date"
+    },
+    "business_address": {
+      "type": "string",
+      "description": "Registered business address"
+    },
+    "website_url": {
+      "type": "string",
+      "description": "Company website if available"
+    },
+    "sgbusiness_url": {
+      "type": "string",
+      "description": "Direct URL to the SGPBusiness listing"
+    }
+  }
+}

@@ -213,6 +213,7 @@ class OpenClawOrchestrator:
         self.llm = OllamaGateway(
             endpoint=self.config.get("llm_endpoint", "http://localhost:11434"),
             model=self.config.get("model", "qwen3.5:9b")
+        )
         self.skill_registry = SkillRegistry(str(self.skills_dir))
 
     def _load_config(self) -> Dict[str, Any]:

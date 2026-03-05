@@ -1,0 +1,20 @@
+{
+  "name": "sgp-entity-finder",
+  "description": "Researches a brand via Perplexica and extracts Singapore legal entity details from SGPBusiness",
+  "goal": "Find the official Singapore corporate entity, UEN, and registration details for a given brand",
+  "skills": [
+    {
+      "name": "research-brand",
+      "input_from_context": {
+        "brand": "input.brand",
+        "perplexica_endpoint": "input.perplexica_endpoint"
+      }
+    },
+    {
+      "name": "scrape-sgpbusiness",
+      "input_from_context": {
+        "entity_name": "results.research-brand.entity_name"
+      }
+    }
+  ]
+}

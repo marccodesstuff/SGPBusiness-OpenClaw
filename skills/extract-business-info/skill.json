@@ -1,0 +1,17 @@
+{
+  "name": "extract-business-info",
+  "description": "Orchestrator placeholder for pipeline control and result formatting",
+  "inputs": {
+    "entity_name": {
+      "type": "string",
+      "description": "Entity name from previous skill",
+      "required": false
+    }
+  },
+  "outputs": {
+    "summary": {
+      "type": "string",
+      "description": "Formatted summary of all extracted information"
+    }
+  }
+}

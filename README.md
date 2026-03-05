@@ -66,7 +66,20 @@ Input: Brand name → Output: {entity_name, UEN, business_type, ...}
 /home/beakthor0301/Code/openclaw-playground/
 ├── package.json                      # Project metadata
 ├── requirements.txt                  # Python dependencies
+├── config.json                       # Default config (copy to ~/.openclaw/)
 ├── orchestrator.py                   # Core orchestration framework
+├── skills/                           # Skill implementations (copy to ~/.openclaw/skills/)
+│   ├── research-brand/
+│   │   ├── skill.py
+│   │   └── skill.json
+│   ├── scrape-sgpbusiness/
+│   │   ├── skill.py
+│   │   └── skill.json
+│   └── extract-business-info/
+│       ├── skill.py
+│       └── skill.json
+├── agents/                           # Agent configs (copy to ~/.openclaw/agents/)
+│   └── sgp-entity-finder.json
 └── scripts/
     └── run-pipeline.py              # CLI entry point
 ```
@@ -95,7 +108,17 @@ source venv/bin/activate  # On WSL/Linux/Mac
 pip install -r requirements.txt
 ```
 
-3. **Verify OpenClaw configuration:**
+3. **Deploy skills, agents, and config to ~/.openclaw:**
+```bash
+mkdir -p ~/.openclaw/skills ~/.openclaw/agents
+cp config.json ~/.openclaw/
+cp -r skills/research-brand ~/.openclaw/skills/
+cp -r skills/scrape-sgpbusiness ~/.openclaw/skills/
+cp -r skills/extract-business-info ~/.openclaw/skills/
+cp -r agents/* ~/.openclaw/agents/
+```
+
+4. **Verify OpenClaw configuration:**
 ```bash
 ls -la ~/.openclaw/
 # Should show: config.json, skills/, agents/

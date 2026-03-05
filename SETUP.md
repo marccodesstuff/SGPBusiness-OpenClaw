@@ -71,13 +71,29 @@ pip install --upgrade pip setuptools wheel
 pip install -r requirements.txt
 
 # Verify installations
-pip list | grep -E "requests|beautifulsoup4|lxml"
+pip list | grep -E "requests|scrapling|ollama"
 ```
 
-### Step 3: Verify OpenClaw Configuration
+### Step 3: Deploy OpenClaw Configuration
+
+The skills, agents, and config are included in the repo. Copy them to `~/.openclaw/`:
 
 ```bash
-# Check ~/.openclaw structure was created
+# Create the OpenClaw home directory
+mkdir -p ~/.openclaw/skills ~/.openclaw/agents
+
+# Copy config, skills, and agents from the repo
+cp config.json ~/.openclaw/
+cp -r skills/research-brand ~/.openclaw/skills/
+cp -r skills/scrape-sgpbusiness ~/.openclaw/skills/
+cp -r skills/extract-business-info ~/.openclaw/skills/
+cp -r agents/* ~/.openclaw/agents/
+```
+
+### Step 4: Verify OpenClaw Configuration
+
+```bash
+# Check ~/.openclaw structure
 ls -la ~/.openclaw/
 
 # Expected output:
@@ -111,7 +127,7 @@ with open('~/.openclaw/config.json'.replace('~', os.path.expanduser('~'))) as f:
 " 2>&1 || echo "Configuration file check skipped"
 ```
 
-### Step 4: Syntax Validation
+### Step 5: Syntax Validation
 
 ```bash
 # Validate Python syntax
@@ -129,7 +145,7 @@ for config in ~/.openclaw/**/*.json; do
 done
 ```
 
-### Step 5: Component Testing
+### Step 6: Component Testing
 
 #### Test 1: Verify Orchestrator Loads
 

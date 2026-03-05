@@ -1,0 +1,26 @@
+{
+  "name": "research-brand",
+  "description": "Queries Perplexica API for Singapore corporate entity information",
+  "inputs": {
+    "brand": {
+      "type": "string",
+      "description": "Brand name or URL to research",
+      "required": true
+    },
+    "perplexica_endpoint": {
+      "type": "string",
+      "description": "Perplexica API endpoint",
+      "default": "http://localhost:3000"
+    }
+  },
+  "outputs": {
+    "entity_name": {
+      "type": "string",
+      "description": "Official Singapore legal entity name"
+    },
+    "research_summary": {
+      "type": "string",
+      "description": "Summary of research findings"
+    }
+  }
+}

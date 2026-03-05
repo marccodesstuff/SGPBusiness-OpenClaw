@@ -1,0 +1,7 @@
+{
+  "llm_engine": "ollama",
+  "llm_endpoint": "http://localhost:11434",
+  "model": "qwen3.5:9b",
+  "perplexica_endpoint": "http://localhost:3000",
+  "timeout": 30
+}

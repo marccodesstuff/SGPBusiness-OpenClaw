@@ -76,7 +76,7 @@ Input: Brand name → Output: {entity_name, UEN, business_type, ...}
 ### Prerequisites
 
 - Python 3.12+
-- Ollama running with qwen2.5:9b model at `http://localhost:11434`
+- Ollama running with qwen3.5:9b model at `http://localhost:11434`
 - Perplexica running at `http://localhost:3000`
 - SGPBusiness website accessible (https://www.sgbizfile.gov.sg)
 
@@ -197,7 +197,7 @@ Update `~/.openclaw/config.json` to customize:
 
 ### Ollama Connection Error
 - Ensure Ollama is running: `ollama serve`
-- Verify model is available: `ollama list` (should show qwen2.5:9b)
+- Verify model is available: `ollama list` (should show qwen3.5:9b)
 - Test connection: `curl http://localhost:11434/api/tags`
 
 ### Perplexica Connection Error

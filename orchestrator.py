@@ -14,7 +14,7 @@ from datetime import datetime
 class OllamaGateway:
     """Interface to Ollama LLM engine"""
 
-    def __init__(self, endpoint: str = "http://localhost:11434", model: str = "qwen2.5:9b"):
+    def __init__(self, endpoint: str = "http://localhost:11434", model: str = "qwen3.5:9b"):
         self.endpoint = endpoint
         self.model = model
 
@@ -212,9 +212,7 @@ class OpenClawOrchestrator:
         # Initialize components
         self.llm = OllamaGateway(
             endpoint=self.config.get("llm_endpoint", "http://localhost:11434"),
-            model=self.config.get("model", "qwen2.5:9b")
-        )
-
+            model=self.config.get("model", "qwen3.5:9b")
         self.skill_registry = SkillRegistry(str(self.skills_dir))
 
     def _load_config(self) -> Dict[str, Any]:
@@ -225,7 +223,7 @@ class OpenClawOrchestrator:
         else:
             return {
                 "llm_endpoint": "http://localhost:11434",
-                "model": "qwen2.5:9b",
+                "model": "qwen3.5:9b",
                 "perplexica_endpoint": "http://localhost:3000"
             }
 

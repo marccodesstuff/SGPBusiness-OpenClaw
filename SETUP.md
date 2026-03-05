@@ -13,16 +13,16 @@ Ensure these services are running before testing:
 curl http://localhost:11434/api/tags
 
 # If running, should return JSON with available models
-# Expected response includes: qwen2.5:9b
+# Expected response includes: qwen3.5:9b
 
 # If not running, start it:
 ollama serve
 
-# In another terminal, ensure qwen2.5:9b is available:
+# In another terminal, ensure qwen3.5:9b is available:
 ollama list
 
 # If not available, pull it:
-ollama pull qwen2.5:9b
+ollama pull qwen3.5:9b
 ```
 
 #### B. Verify Perplexica (Research Engine)
@@ -217,14 +217,14 @@ ps aux | grep ollama
 # Start Ollama if not running:
 ollama serve &
 
-# Check if qwen2.5:9b is pulled:
-ollama list | grep qwen2.5
+# Check if qwen3.5:9b is pulled:
+ollama list | grep qwen3.5
 
 # If not pulled, pull it:
-ollama pull qwen2.5:9b
+ollama pull qwen3.5:9b
 
 # Wait for it to complete, then test:
-curl http://localhost:11434/api/tags | grep qwen2.5
+curl http://localhost:11434/api/tags | grep qwen3.5
 ```
 
 #### Issue: "Connection refused" - Perplexica

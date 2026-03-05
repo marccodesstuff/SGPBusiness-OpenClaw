@@ -25,7 +25,7 @@ Verify these services are running:
 1. **Ollama LLM** (Port 11434)
    ```bash
    curl http://localhost:11434/api/tags
-   # Should return JSON with qwen2.5:9b listed
+   # Should return JSON with qwen3.5:9b listed
    ```
 
 2. **Perplexica Search** (Port 3000)
@@ -147,7 +147,7 @@ Edit `~/.openclaw/config.json`:
 ```json
 {
   "llm_endpoint": "http://localhost:11434",
-  "model": "qwen2.5:9b",
+  "model": "qwen3.5:9b",
   "perplexica_endpoint": "http://localhost:3000",
   "timeout": 30,
   "debug": false

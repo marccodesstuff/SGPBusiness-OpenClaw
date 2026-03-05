@@ -5,7 +5,7 @@ OpenClaw SGPBusiness Pipeline - Commands Reference
 PREREQUISITE CHECK - Run these BEFORE first use:
 ================================================================================
 
-# Check Ollama is running with qwen2.5:9b
+# Check Ollama is running with qwen3.5:9b
 curl http://localhost:11434/api/tags
 
 # Check Perplexica is running  
@@ -157,8 +157,8 @@ TROUBLESHOOTING COMMANDS:
 # If Ollama connection fails, start it:
 ollama serve
 
-# If Olivama qwen2.5:9b not available, pull it:
-ollama pull qwen2.5:9b
+# If Olivama qwen3.5:9b not available, pull it:
+ollama pull qwen3.5:9b
 
 # If Perplexica not running, check logs (depends on your setup)
 

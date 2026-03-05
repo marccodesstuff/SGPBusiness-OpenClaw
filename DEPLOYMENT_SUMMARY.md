@@ -62,7 +62,7 @@ Your OpenClaw orchestration pipeline for researching brands and extracting Singa
 ### Before First Run: Verify Prerequisites
 
 ```bash
-# 1. Verify Ollama is running with qwen2.5:9b model
+# 1. Verify Ollama is running with qwen3.5:9b model
 curl http://localhost:11434/api/tags
 
 # 2. Verify Perplexica is accessible
@@ -178,7 +178,7 @@ User Input (Brand Name)
 {
   "llm_engine": "ollama",
   "llm_endpoint": "http://localhost:11434",
-  "model": "qwen2.5:9b",
+  "model": "qwen3.5:9b",
   "perplexica_endpoint": "http://localhost:3000",
   "timeout": 30
 }
@@ -229,7 +229,7 @@ To install: `pip install -r requirements.txt`
 ### Ollama Integration
 - **Location**: `orchestrator.py:OllamaGateway`
 - **Endpoint**: `http://localhost:11434`
-- **Model**: `qwen2.5:9b`
+- **Model**: `qwen3.5:9b`
 - **Purpose**: LLM orchestration and reasoning
 
 ### Perplexica Integration

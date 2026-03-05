@@ -9,8 +9,8 @@ import json
 import argparse
 from pathlib import Path
 
-# Add parent directory to path for imports
-sys.path.insert(0, str(Path(__file__).parent))
+# Add project root (parent of scripts/) to path for imports
+sys.path.insert(0, str(Path(__file__).resolve().parent.parent))
 
 from orchestrator import OpenClawOrchestrator
 
